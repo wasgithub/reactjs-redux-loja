@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
@@ -8,6 +9,8 @@ import {
 import { Container, ProductTable, Total } from './styles';
 
 export default function Cart() {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <Container>
       <ProductTable>
